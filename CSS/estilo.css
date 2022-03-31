@@ -240,3 +240,19 @@ img{
 #fotos h1{
     border-bottom: 1px solid #56a79a;
 }
+
+#donar h4{  /*DISEÑO DE H4*/
+    font-size: 32px;
+    color:#56a79a;
+}
+
+#donar img{
+    width: 50%;
+}
+
+#donar iframe{
+    padding-bottom: 20px;
+    border-radius: 20px;
+    border-left:4px solid #F2C524;
+    border-right:4px solid #F2C524;
+}
