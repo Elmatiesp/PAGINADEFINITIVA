@@ -23,6 +23,13 @@ img{
     background: #56a79a;
 }
 
+#infoprincipal{
+    background:url('../IMAGENES/fondobajo.jpg') center center;
+    color: #fff;
+    border-bottom: 1px #56a79a;
+    margin-bottom: 30px;
+}
+
 #headerprincipal{
     border-bottom: 1px solid #56a79a;
 }
