@@ -15,7 +15,8 @@ img{
 }
 
 .primary-text{
-    color: red;
+    color: #56a79a;
+    font-size: 32px;
 }
 
 .primary-background{
@@ -48,7 +49,7 @@ img{
 }
 
 #mostrador{
-    background:url('../IMAGENES/fondo.jpg') center center;
+    background:url('../IMAGENES/fondoprincipal.png') center center;
     border-bottom: 1px #56a79a;
     margin-bottom: 30px;
 }
@@ -58,7 +59,7 @@ img{
 }
 
 #mostrador h1{
-    font-size: 50px;
+    font-size: 32px;
     margin: 0;
     padding-bottom: 20px;
 }
@@ -88,19 +89,24 @@ img{
     }
 }
 
-/* features */
-#features h2{
+/* Beneficios */
+#Beneficios h2{
     font-size: 35px;
     margin-bottom: 10px;
 }
 
-#features p{
+#Beneficios p{
     color:#888;
     margin: 0;
     margin-bottom: 40px;
 }
 
-#features .fa-brands{
+#Beneficios .fa-brands{
+    font-size: 60px;
+    color:#56a79a;
+}
+
+#Beneficios .fa-solid{
     font-size: 60px;
     color:#56a79a;
 }
