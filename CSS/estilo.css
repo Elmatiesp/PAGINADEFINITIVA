@@ -113,7 +113,7 @@ img{
 
 /* INFO */
 #info{
-    background: url('../IMAGENES/fondo.jpg');
+    background: url('../IMAGENES/fondobajo.jpg');
     color: #fff;
 }
 
@@ -121,7 +121,7 @@ img{
     font-size: 35px;
     margin: 0;
     padding-bottom: 10px;
-    color: black;
+    color: whitesmoke;
 }
 
 #info ul{
@@ -166,4 +166,38 @@ img{
 #footerprincipal{
     background: #56a79a;
     color: #fff;
+}
+
+#linea{
+    background: #fff;
+    color: #fff;
+}
+
+/* productos */
+#Beneficios h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#Beneficios p{
+    color:#888;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+#Beneficios .fa-brands{
+    font-size: 60px;
+    color:#56a79a;
+}
+
+#Beneficios .fa-solid{
+    font-size: 60px;
+    color:#56a79a;
+}
+
+#productos button{
+    background: #222;
+    color:fff;
+    padding: 10px;
+    border: 0;
 }
