@@ -27,6 +27,10 @@ img{
     border-bottom: 1px solid #56a79a;
 }
 
+#headerprincipal h1{
+    font-size: 32;
+}
+
 #navbar{
     text-transform: uppercase;
 }
@@ -89,28 +93,6 @@ img{
     }
 }
 
-/* Beneficios */
-#Beneficios h2{
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-#Beneficios p{
-    color:#888;
-    margin: 0;
-    margin-bottom: 40px;
-}
-
-#Beneficios .fa-brands{
-    font-size: 60px;
-    color:#56a79a;
-}
-
-#Beneficios .fa-solid{
-    font-size: 60px;
-    color:#56a79a;
-}
-
 /* INFO */
 #info{
     background: url('../IMAGENES/fondobajo.jpg');
@@ -168,10 +150,7 @@ img{
     color: #fff;
 }
 
-#linea{
-    background: #fff;
-    color: #fff;
-}
+/*DISEÑO DE PAGINA PRINCIPAL BENEFICIOS*/
 
 #Beneficios h2{
     font-size: 35px;
@@ -184,15 +163,24 @@ img{
     margin-bottom: 40px;
 }
 
-#Beneficios .fa-brands{
-    font-size: 60px;
-    color:#56a79a;
-}
-
 #Beneficios .fa-solid{
     font-size: 60px;
     color:#56a79a;
 }
+
+#Beneficios h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #56a79a;
+}
+
+#Beneficios p{
+    color:#888;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
 
 /*DISEÑO DE PAGINA PRODUCTOS*/
 
@@ -201,6 +189,11 @@ img{
     color:fff;
     padding: 10px;
     border: 0;
+}
+
+#linea{
+    background: #fff;
+    color: #fff;
 }
 
 
@@ -228,4 +221,15 @@ img{
     background: #fff;
     color: black;
     padding: 10px;
+}
+
+
+#fotos .container{
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+#fotos h1{
+    border-bottom: 1px solid #56a79a;
 }
