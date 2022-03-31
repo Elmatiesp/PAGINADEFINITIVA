@@ -173,7 +173,6 @@ img{
     color: #fff;
 }
 
-/* productos */
 #Beneficios h2{
     font-size: 35px;
     margin-bottom: 10px;
@@ -195,9 +194,38 @@ img{
     color:#56a79a;
 }
 
-#productos button{
+/*DISEÑO DE PAGINA PRODUCTOS*/
+
+#productos button{  /*DISEÑO DE BUTTON*/
     background: #222;
     color:fff;
     padding: 10px;
     border: 0;
+}
+
+
+
+/*DISEÑO DE PAGINA SEGUIMIENTO*/
+
+#buscarpedido h4{  /*DISEÑO DE H4*/
+    font-size: 60px;
+    color:#56a79a;
+}
+
+#buscarpedido p{  /*DISEÑO DE P*/
+    font-size: 32px;
+    color:#56a79a;
+}
+
+#buscarpedido button{  /*DISEÑO DE BUTTON*/
+    background: #222;
+    color:fff;
+    padding: 10px;
+    border: 0;
+}
+
+#buscarpedido input{  /*DISEÑO DE BARRA INPUT*/ 
+    background: #fff;
+    color: black;
+    padding: 10px;
 }
