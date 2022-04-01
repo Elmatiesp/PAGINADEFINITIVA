@@ -1,0 +1,8 @@
+Errores por arreglar:
+
+1- Pagina seguimiento al apretar el boton marca como pagina current donacion.
+2- tamaño barra nav en inicio es menor. (solucionado de manera rapida modificando grids) buscar solucion?
+3- productos no alineados bien
+4- pagina donacion texto en tamaño pequeño no queda bien
+5- pagina seguimiento texto en tamaño pequeño no queda bien
+6- mapa seguimiento no queda bien
