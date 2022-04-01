@@ -100,6 +100,15 @@ img{
     }
 }
 
+#seguido{
+    background: url('../IMAGENES/fondoseguido.jpg');
+    padding: 30px;
+}
+
+#buscarpedido{
+    background: url('../IMAGENES/fondoseguido.jpg');
+}
+
 /* INFO */
 #info{
     background: url('../IMAGENES/fondobajo.jpg');
@@ -155,6 +164,12 @@ img{
 #footerprincipal{
     background: #56a79a;
     color: #fff;
+}
+
+#buscarpedido .fa-solid{
+    font-size: 200px;
+    color:#56a79a;
+    padding: 30px;
 }
 
 /*DISEÑO DE PAGINA PRINCIPAL BENEFICIOS*/
@@ -250,9 +265,12 @@ img{
     width: 50%;
 }
 
-#donar iframe{
+#seguido iframe{
     padding-bottom: 20px;
     border-radius: 20px;
-    border-left:4px solid #F2C524;
-    border-right:4px solid #F2C524;
+}
+
+#seguido h4{  /*DISEÑO DE H4*/
+    font-size: 32px;
+    color:#56a79a;
 }
