@@ -5,4 +5,3 @@ Errores por arreglar:
 3- productos no alineados bien
 4- pagina donacion texto en tamaño pequeño no queda bien
 5- pagina seguimiento texto en tamaño pequeño no queda bien
-6- mapa seguimiento no queda bien
