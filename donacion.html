@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,21 @@
     <link rel="stylesheet" href="CSS\flexboxgrid.css">
     <script src="https://kit.fontawesome.com/86193ed89b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header id="headerprincipal">
         <div class="container">
             <div class="row end-sm end-md end-lg center-xs middle-xs middle-s middle-md middle-lg">
                 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                    <h1><span class="primary-text">Mascota</span>Landia</h1>
+                    <h1><a href="pagina.html"><span class="primary-text">Mascota</span></a>Landia</h1>
                 </div>
-                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">                  
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
                     <nav id="navbar">
                         <ul>
                             <li><a href="pagina.html">Inicio</a></li>
                             <li><a href="productos.html">Productos</a></li>
                             <li><a href="seguimiento.html">Seguimiento</a></li>
-                            <li class="current"><a href="donacion.html">Donacion</a></li>
+                            <li class="current"><a href="donacion.html">Hazte socio</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -29,21 +31,98 @@
         </div>
     </header>
 
-    <section id="Buscarpedido"> 
-        <div class="container">
-            <div class="row">
-                <div class="col-xs 12 col-sm-12 col-md-12 col-lg-12 center-xs center-sm center-md center-lg">
-                    <h4>PAGINA DE DONACION</h4>
-                    <p>Presiona para realizar tu donacion:</p>
-                    <form>
-                        <button type="submit" name="button"><a href="donado.html">DONAR</a></button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <section id="formulario">
+        <form action="" class="formulario" id="formulario">
+			<!-- Grupo: Usuario -->
+			<div class="formulario__grupo" id="grupo__usuario">
+				<label for="usuario" class="formulario__label">Usuario</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Pepe123">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre y Apellido</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Juan Carlos">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El nombre tiene que ser de 1 a 40 dígitos y solo puede contener letras.</p>
+			</div>
+
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+			</div>
+
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Repetir Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo tambien tiene que contener un @.</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="number" class="formulario__input" name="telefono" id="telefono" placeholder="912345678">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono debe contener 9 numeros.</p>
+			</div>
+
+            <!-- Grupo: Monto a donar -->
+			<div class="formulario__grupo" id="grupo__monto">
+				<label for="monto" class="formulario__label">Monto a donar</label>
+				<div class="formulario__grupo-input">
+					<input type="number" class="formulario__input" name="monto" id="monto" placeholder="$$$$$$">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El monto debe ser un numero y no puede ser mayor a 7 digitos.</p>
+			</div>
+
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
     </section>
 
-    <section id="infoBaja"> 
+    <section id="infoBaja">
         <div class="container">
             <div class="row">
                 <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
@@ -56,7 +135,8 @@
                 </div>
                 <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
                     <h4>Sobre nosotros</h4>
-                    <p>Somos una empresa de venta de productos para mascota en apoyo a una fundacion sin fines de lucro.</p>
+                    <p>Somos una empresa de venta de productos para mascota en apoyo a una fundacion sin fines de lucro.
+                    </p>
                 </div>
                 <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
                     <h4>Recibe novedades en tu correo</h4>
@@ -81,5 +161,6 @@
             </div>
         </footer>
     </section>
+    <script src="JS\formulario.js"></script>
 </body>
 </html>
