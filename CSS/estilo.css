@@ -10,6 +10,14 @@ body{
     margin: auto;
 }
 
+.container1{
+    max-width: 900px;
+	width: 90%;
+	margin: auto;
+	padding: 60px 50px;
+	position: center;
+}
+
 img{
     width: 100%;
 }
