@@ -4,26 +4,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MascotaLandia</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS\estilo.css">
-    <link rel="stylesheet" href="CSS\flexboxgrid.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'web/css/estilo.css'%}">
+    <link href='{% static "/web/css/estilo.css" %}' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'web/css/flexboxgrid.css'%}">
     <script src="https://kit.fontawesome.com/86193ed89b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <header id="headerprincipal">
         <div class="container">
             <div class="row end-sm end-md end-lg center-xs middle-xs middle-s middle-md middle-lg">
                 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                    <h1><a href="pagina.html"><span class="primary-text">Mascota</span></a>Landia</h1>
+                    <h1><a href="{% url 'index' %}"><span class="primary-text">Mascota</span></a>Landia</h1>
                 </div>
                 <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">                  
                     <nav id="navbar">
                         <ul>
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="productos.html">Productos</a></li>
-                            <li><a href="seguimiento.html">Seguimiento</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li class="current"><a href="donacion.html">Hazte socio</a></li>
+                            <li><a href="{% url 'index' %}">Inicio</a></li>
+                            <li><a href="{% url 'productos' %}">Productos</a></li>
+                            <li class="current"><a href="{% url 'seguimiento' %}">Seguimiento</a></li>
+                            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                            <li><a href="{% url 'donacion' %}">Hazte socio</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -31,14 +33,17 @@
         </div>
     </header>
 
-    <section id="donar"> 
+    <section id="buscarpedido"> 
         <div class="container">
             <div class="row">
                 <div class="col-xs 12 col-sm-12 col-md-12 col-lg-12 center-xs center-sm center-md center-lg">
-                    <h4>TU DONACION FUE COMPLEATADA CON EXITO UNA CUENTA SE ENVIARA A TU CORREO.</h4>
-                </div>
-                <div class="col-xs 12 col-sm-12 col-md-12 col-lg-12 center-xs center-sm center-md center-lg">
-                    <img src="IMAGENES\cat-gato.gif" alt="">
+                    <h4>Busca tu pedido</h4>
+                    <p>ingresa tu numero de seguimiento para buscar tu pedido:</p>  
+                    <form>
+                        <input type="text" name="pedido" placeholder="Ingresa tu codigo de seguimiento">
+                        <button type="submit" name="button"><a href="{% url 'productos' %}">Buscar</a></button>
+                    </form>
+                    <i class="fa-solid fa-location-dot"></i>
                 </div>
             </div>
         </div>

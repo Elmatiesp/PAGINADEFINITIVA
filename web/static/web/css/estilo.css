@@ -16,7 +16,6 @@ body{
 	margin: auto;
 	padding: 60px 50px;
 	position: center;
-    
 }
 
 img{
@@ -67,9 +66,8 @@ img{
     border-bottom: 3px solid #56a79a;
     padding-bottom: 3px;
 }
-
 #mostrador{
-    background:url('../IMAGENES/fondoprincipal.png') center center;
+    background: url('web\static\web\img\fondoprincipal.png');
     border-bottom: 1px #56a79a;
     margin-bottom: 30px;
 }
@@ -283,6 +281,21 @@ img{
     font-size: 32px;
     color:#56a79a;
 }
+
+#showdatabase th{
+    text-align: center;
+}
+
+#showdatabase td{
+    text-align: center;
+    color: rebeccapurple;
+}
+
+#showdatabase table{
+	height: 100px;
+    width: 1200px;
+}
+
 .formulario {
 	max-width: 800px;
 	width: 90%;

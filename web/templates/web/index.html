@@ -4,8 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MascotaLandia</title>
-    <link rel="stylesheet" href="CSS\estilo.css">
-    <link rel="stylesheet" href="CSS\flexboxgrid.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'web/css/estilo.css'%}">
+    <link href='{% static "/web/css/estilo.css" %}' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'web/css/flexboxgrid.css'%}">
     <script src="https://kit.fontawesome.com/86193ed89b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -14,27 +16,31 @@
         <div class="container">
             <div class="row end-sm end-md end-lg center-xs middle-xs middle-s middle-md middle-lg">
                 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-                    <h1><a href="pagina.html"><span class="primary-text">Mascota</span></a>Landia</h1>
+                    <h1><a href="{% url 'index' %}"><span class="primary-text">Mascota</span></a>Landia</h1>
                 </div>
-                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">                  
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
                     <nav id="navbar">
                         <ul>
-                            <li class="current"><a href="index.html">Inicio</a></li>
-                            <li><a href="productos.html">Productos</a></li>
-                            <li><a href="seguimiento.html">Seguimiento</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="donacion.html">Hazte socio</a></li>
+                            <li class="current"><a href="{% url 'index' %}">Inicio</a></li>
+                            <li><a href="{% url 'productos' %}">Productos</a></li>
+                            <li><a href="{% url 'seguimiento' %}">Seguimiento</a></li>
+                            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                            <li><a href="{% url 'donacion' %}">Hazte socio</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    
     <section id="mostrador">
         <div class="container">
             <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
                 <div class="col-xs-12 col-sm-10 col-md-10 col-lg-7 showcase-content">
+                    <style>
+                    #mostrador{
+                        background-image: url('{% static "web/img/fondoprincipal.png" %}');
+                    }
+                    </style>
                     <h1>Bienvenido a <span class="primary-text">MascotaLandia</span></h1>
                     <p>Al comprar aqui ayudas a una fundacion sin fines de lucro</p>
                 </div>
@@ -46,6 +52,11 @@
         <div class="container">
             <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 showcase-content">
+                    <style>
+                        #infoprincipal{
+                            background-image: url('{% static "web/img/fondobajo.jpg" %}');
+                        }
+                        </style>
                     <h1>Somos una empresa de venta de productos para mascota en apoyo a una fundacion sin fines de lucro.</h1>
                 </div>
             </div>
@@ -65,13 +76,13 @@
                         </ol>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img class="d-block w-100" src="IMAGENES\foto1.jpg" alt="First slide">
+                            <img class="d-block w-100" src="{% static 'web/img/foto1.jpg'%}" alt="First slide">
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="IMAGENES\foto2.png" alt="Second slide">
+                            <img class="d-block w-100" src="{% static 'web/img/foto2.png'%}" alt="Second slide">
                           </div>
                           <div class="carousel-item">
-                            <img class="d-block w-100" src="IMAGENES\foto3.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="{% static 'web/img/foto3.jpg'%}" alt="Third slide">
                           </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -112,7 +123,6 @@
                             <p>En MascotaLandia somos expertos en entregarte los productos que tu mascota necesita. </p>
                         </div>
                     </div>
-                        
                         <!--Linea 2-->
                     <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -139,8 +149,13 @@
     <section id="info">
         <div class="container">
             <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+                <style>
+                    #info{
+                        background-image: url('{% static "web/img/fondobajo.jpg" %}');
+                    }
+                    </style>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <img src="IMAGENES\perro.png" alt="">
+                    <img src="{% static 'web/img/perro.png'%}" alt="">
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <h2>PRODUCTOS EN VENTA</h2>
@@ -155,8 +170,7 @@
             </div>
         </div>
     </section>
-
-    <section id="infoBaja"> 
+    <section id="infoBaja">
         <div class="container">
             <div class="row">
                 <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
