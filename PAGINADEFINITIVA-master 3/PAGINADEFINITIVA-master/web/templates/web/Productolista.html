@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Datos Productos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'web/css/estilo.css'%}">
+    <link href='{% static "/web/css/estilo.css" %}' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'web/css/flexboxgrid.css'%}">
+    <script src="https://kit.fontawesome.com/86193ed89b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <header id="headerprincipal">
+        <div class="container">
+            <div class="row end-sm end-md end-lg center-xs middle-xs middle-s middle-md middle-lg">
+                <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+                    <h1><a href="{% url 'index' %}"><span class="primary-text">Mascota</span></a>Landia</h1>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                    <nav id="navbar">
+                        <ul>
+                            <li class="current"><a href="{% url 'index' %}">Inicio</a></li>
+                            <li><a href="{% url 'productos' %}">Productos</a></li>
+                            <li><a href="{% url 'seguimiento' %}">Seguimiento</a></li>
+                            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                            <li><a href="{% url 'donacion' %}">Hazte socio</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="showdatabase">
+        <div class="row">
+            {% load humanize %}
+            <h1>Lista de productos disponibles:</h1>
+        </div>
+        <div class="row">
+            <div class="row mb-3">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Imagenes</th>
+                            <th scope="col">Descripcion</th>
+                        </tr>
+                    </thead>
+                            {% for X in producto%}
+                            <tr>
+                                <td>{{ X.nombre }}</td>
+                                <td>${{X.precio | intcomma }} CLP</td>
+                                <td><img src="/{{X.img}}" alt="Foto" width="250"></td>
+                                <td>{{ X.descripcion }}</td>
+                            </tr>
+                            {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <a href="{% url 'crearpro' %}">Ingresar Nuevo Producto
+            </a>
+            <a href="{% url 'index' %}">Home
+            </a>
+        </div>
+    </div>
+    <script src='{% static "/web/js/formulario.js" %}'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
