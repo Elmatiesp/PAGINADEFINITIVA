@@ -1,0 +1,71 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<form id="form-login" method="post" action="">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <label for="username">Nombre de Usuario:</label>
+                {{form.username}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <label for="username">Contraseña:</label>
+                {{form.password}}
+            </div>
+        </div>
+    </div>   
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <input class="form-control" type="submit" name="Ingresar">
+            </div>
+        </div>
+    </div>   
+</form>
+
+    <section id="infoBaja"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                    <h4 id="blanco">Contactanos</h4>
+                    <ul>
+                        <li>(+56) 9 4961 5736</li>
+                        <li>contacto@mascotalandia.cl</li>
+                        <li>742 de Evergreen Terrace</li>
+                    </ul>
+                </div>
+                <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                    <h4 id="blanco">Sobre nosotros</h4>
+                    <p>Somos una empresa de venta de productos para mascota en apoyo a una fundacion sin fines de lucro.</p>
+                </div>
+                <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                    <h4 id="blanco">Recibe novedades en tu correo</h4>
+                    <p>Ingresa tu correo aqui para no perderte de nada</p>
+                    <form>
+                        <input type="text" name="email" placeholder="Ingresa email">
+                        <button type="submit" name="button">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer id="footerprincipal">
+            <div class="container">
+                <div class="row center-xs center-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p>En ayuda a una fundacion sin fines de lucros</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+{% endblock content %}

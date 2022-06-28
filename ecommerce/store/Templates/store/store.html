@@ -1,0 +1,78 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+	<section id="productos">
+        <div class="container">
+            <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2>Productos disponibles en MascotaLandia:</h2>	
+                    <p>Aqui encontraras todos los productos que puedes comprar.</p>
+                    <!--Linea 1-->
+                    <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg box-element product">
+						{% for product in products %}
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<img class="thumbnail" src="{{product.imageURL}}">
+                            <h6><strong>{{product.name}}</strong></h6>
+							<h4 style="display: inline-block; float: right"><strong>${{product.price}}</strong></h4>
+							<button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Añadir al carro</button>
+							<a class="btn btn-outline-success" href="#">Ver</a>
+                        </div>
+						{% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer id="linea">
+            <div class="container">
+                <div class="row center-xs center-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <section id="infoBaja"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                    <h4 id="blanco">Contactanos</h4>
+                    <ul>
+                        <li>(+56) 9 4961 5736</li>
+                        <li>contacto@mascotalandia.cl</li>
+                        <li>742 de Evergreen Terrace</li>
+                    </ul>
+                </div>
+                <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                    <h4 id="blanco">Sobre nosotros</h4>
+                    <p>Somos una empresa de venta de productos para mascota en apoyo a una fundacion sin fines de lucro.</p>
+                </div>
+                <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                    <h4 id="blanco">Recibe novedades en tu correo</h4>
+                    <p>Ingresa tu correo aqui para no perderte de nada</p>
+                    <form>
+                        <input type="text" name="email" placeholder="Ingresa email">
+                        <button type="submit" name="button">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer id="footerprincipal">
+            <div class="container">
+                <div class="row center-xs center-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p>En ayuda a una fundacion sin fines de lucros</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+{% endblock content %}

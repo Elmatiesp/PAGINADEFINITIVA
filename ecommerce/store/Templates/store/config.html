@@ -1,0 +1,39 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg box-element product">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button onclick="window.location.href='/anadir'">Crear producto</button>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button>Modificar producto</button>
+    </div>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">nombre</th>
+            <th scope="col">precio</th>
+            <th scope="col">digital</th>
+            <th scope="col">Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for prod in productos %}
+    <tr>
+        <td>{{prod.name}}</td>
+        <td>{{prod.price}}</td>
+        <td>{{prod.digital}}</td>
+        <td>
+            <a href="#" class="btn btn-warning">Editar</a>
+        </td>
+        <td>
+            <a href="{% url 'eliminar' prod.price %} " class="btn btn-danger">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

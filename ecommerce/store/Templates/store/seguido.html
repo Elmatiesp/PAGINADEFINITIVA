@@ -1,0 +1,57 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<section id="seguido"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs 12 col-sm-12 col-md-12 col-lg-12 center-xs center-sm center-md center-lg">
+                <h4>Tu pedido se encuentra en:</h4>
+            </div>
+            <div class="col-xs 12 col-sm-12 col-md-12 col-lg-12 center-xs center-sm center-md center-lg">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6690.379756959671!2d-71.55502992101435!3d-33.025127659869995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0d939e011bd%3A0x51a2e56e68d59c2d!2sChilexpress%20Centro%20de%20Servicios!5e0!3m2!1ses!2scl!4v1648769454922!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="infoBaja"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                <h4>Contactanos</h4>
+                <ul>
+                    <li>(+56) 9 4961 5736</li>
+                    <li>contacto@mascotalandia.cl</li>
+                    <li>742 de Evergreen Terrace</li>
+                </ul>
+            </div>
+            <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                <h4>Sobre nosotros</h4>
+                <p>Somos una empresa de venta de productos para mascota en apoyo a una fundacion sin fines de lucro.</p>
+            </div>
+            <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                <h4>Recibe novedades en tu correo</h4>
+                <p>Ingresa tu correo aqui para no perderte de nada</p>
+                <form>
+                    <input type="text" name="email" placeholder="Ingresa email">
+                    <button type="submit" name="button">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <footer id="footerprincipal">
+        <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>En ayuda a una fundacion sin fines de lucros</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+{% endblock content %}

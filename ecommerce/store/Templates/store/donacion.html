@@ -1,0 +1,134 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<section id="formulario">
+    <form action="" class="formulario" id="formulario">
+        <!-- Grupo: Usuario -->
+        <div class="formulario__grupo" id="grupo__usuario">
+            <label for="usuario" class="formulario__label">Usuario</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Pepe123">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre y Apellido</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Juan Carlos">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El nombre tiene que ser de 1 a 40 dígitos y solo puede contener letras.</p>
+        </div>
+
+        <!-- Grupo: Contraseña -->
+        <div class="formulario__grupo" id="grupo__password">
+            <label for="password" class="formulario__label">Contraseña</label>
+            <div class="formulario__grupo-input">
+                <input type="password" class="formulario__input" name="password" id="password">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+        </div>
+
+        <!-- Grupo: Contraseña 2 -->
+        <div class="formulario__grupo" id="grupo__password2">
+            <label for="password2" class="formulario__label">Repetir Contraseña</label>
+            <div class="formulario__grupo-input">
+                <input type="password" class="formulario__input" name="password2" id="password2">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+        </div>
+
+        <!-- Grupo: Correo Electronico -->
+        <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+                <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo tambien tiene que contener un @.</p>
+        </div>
+
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Teléfono</label>
+            <div class="formulario__grupo-input">
+                <input type="number" class="formulario__input" name="telefono" id="telefono" placeholder="912345678">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El telefono debe contener 9 numeros.</p>
+        </div>
+
+        <!-- Grupo: Monto a donar -->
+        <div class="formulario__grupo" id="grupo__monto">
+            <label for="monto" class="formulario__label">Monto a donar</label>
+            <div class="formulario__grupo-input">
+                <input type="number" class="formulario__input" name="monto" id="monto" placeholder="$$$$$$">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El monto debe ser un numero y no puede ser mayor a 7 digitos.</p>
+        </div>
+
+        <!-- Grupo: Terminos y Condiciones -->
+        <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                Acepto los Terminos y Condiciones
+            </label>
+        </div>
+
+        <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+        </div>
+
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+        </div>
+    </form>
+</section>
+
+<section id="infoBaja">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                <h4>Contactanos</h4>
+                <ul>
+                    <li>(+56) 9 4961 5736</li>
+                    <li>contacto@mascotalandia.cl</li>
+                    <li>742 de Evergreen Terrace</li>
+                </ul>
+            </div>
+            <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                <h4>Sobre nosotros</h4>
+                <p>Somos una empresa de venta de productos para mascota en apoyo a una fundacion sin fines de lucro.
+                </p>
+            </div>
+            <div class="col-xs 12 col-sm-4 col-md-4 col-lg-4">
+                <h4>Recibe novedades en tu correo</h4>
+                <p>Ingresa tu correo aqui para no perderte de nada</p>
+                <form>
+                    <input type="text" name="email" placeholder="Ingresa email">
+                    <button type="submit" name="button">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <footer id="footerprincipal">
+        <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>En ayuda a una fundacion sin fines de lucros</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+{% endblock content %}
