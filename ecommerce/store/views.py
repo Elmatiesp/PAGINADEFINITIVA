@@ -175,6 +175,9 @@ def eliminar(request, myname):
     item.delete()
     return redirect(config)
 
+def contacto(request):
+    return render(request, 'store/contacto.html')
+
 @login_required
 def config(request):
     producto = Product.objects.all()

@@ -22,7 +22,8 @@ urlpatterns = [
     path('anadir/', views.anadir, name="anadir"),
     path('config/', views.config, name="config"),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('config/<int:myname>/', views.eliminar, name="eliminar")
+    path('config/<int:myname>/', views.eliminar, name="eliminar"),
+    path('contacto/', views.contacto, name="contacto")
 
 
 ]
